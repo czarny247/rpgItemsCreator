@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.11)
 
+project(shkeymgr)
+
 # Download and unpack googletest at configure time
 configure_file(cmake/CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
@@ -36,3 +38,5 @@ endif()
 add_executable(tests src/test/main.cpp)
 target_link_libraries(tests gtest_main)
 add_test(NAME tests COMMAND tests)
+
+add_executable(shkeymgr src/shkeymgr/main.cpp)
