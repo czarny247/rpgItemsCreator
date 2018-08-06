@@ -34,3 +34,5 @@ endif()
 add_executable(tests src/test/main.cpp)
 target_link_libraries(tests gtest_main)
 add_test(NAME tests COMMAND tests)
+
+file(REMOVE_RECURSE ${CMAKE_BINARY_DIR}/googletest-download)
