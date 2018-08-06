@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.11)
 
-project(shkeymgr)
+project(rpgItemsCreator)
 
 # Download and unpack googletest at configure time
 configure_file(cmake/CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -39,4 +39,4 @@ add_executable(tests src/test/main.cpp)
 target_link_libraries(tests gtest_main)
 add_test(NAME tests COMMAND tests)
 
-add_executable(shkeymgr src/shkeymgr/main.cpp)
+add_executable(rpgItemsCreator src/rpgItemsCreator/main.cpp)
