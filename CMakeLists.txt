@@ -1,9 +1,18 @@
 cmake_minimum_required(VERSION 2.8.11)
 
-project(rpgItemsCreator)
+project(RPG_ITEMS_CREATOR)
+add_subdirectory(src/rpgItemsCreator rpgItemsCreator)
+add_subdirectory(src/test test)
 
-#creating test executable
-#todo - this step only in debug / not in release
-include(cmake/test/CMakeLists.txt)
+enable_testing()
+add_test(NAME MyTest COMMAND Test)
 
-add_executable(rpgItemsCreator src/rpgItemsCreator/main.cpp)
+set(INCLUDE_DIR src/rpgItemsCreator)
+
+set(INCL_DIRS
+	INCLUDE_DIR
+	thirdparty/json/include)
+
+target_include_directories(ObjectLib PRIVATE thirdparty/json/include)
+target_include_directories(rpgItemsCreator PRIVATE ${INCL_DIRS})
+target_include_directories(Test PRIVATE ${INCL_DIRS})

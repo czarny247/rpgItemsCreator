@@ -1,14 +1,14 @@
 # Download and unpack googletest at configure time
-configure_file(cmake/test/CMakeLists.txt.in googletest-download/CMakeLists.txt)
+configure_file(${PROJECT_SOURCE_DIR}/cmake/test/CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
   RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/test/googletest-download)
 if(result)
   message(FATAL_ERROR "CMake step for googletest failed: ${result}")
 endif()
 execute_process(COMMAND ${CMAKE_COMMAND} --build .
   RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/test/googletest-download)
 if(result)
   message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
@@ -29,10 +29,5 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/googletest/src
 if (CMAKE_VERSION VERSION_LESS ${CMAKE_MINIMUM_REQUIRED_VERSION})
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
-
-# Now simply link against gtest or gtest_main as needed. Eg
-add_executable(tests src/test/main.cpp)
-target_link_libraries(tests gtest_main)
-add_test(NAME tests COMMAND tests)
 
 file(REMOVE_RECURSE ${CMAKE_BINARY_DIR}/googletest-download)

@@ -1,0 +1,11 @@
+TODOS:
+
+* separate targets (test, app)
+* make app lib to make test link against it [x] (lib for each functionality?)
+* TO READ:
+	# https://stackoverflow.com/questions/15175318/cmake-how-to-build-external-projects-and-include-their-targets
+	# https://www.selectiveintellect.net/blog/2016/7/29/using-cmake-to-add-third-party-libraries-to-your-project-1
+	# https://github.com/mfreiholz/cmake-example-external-project
+	# https://mirkokiefer.com/cmake-by-example-f95eb47d45b1
+
+* efficiently using external project
