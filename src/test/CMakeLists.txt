@@ -1,4 +1,4 @@
-include(${PROJECT_SOURCE_DIR}/cmake/test/CMakeLists.txt)
+# include(${PROJECT_SOURCE_DIR}/cmake/test/CMakeLists.txt)
 
 set(TEST_SOURCES object/ObjectBuilderTests.cpp)
 
