@@ -1,5 +1,3 @@
-# include(${PROJECT_SOURCE_DIR}/cmake/test/CMakeLists.txt)
-
 set(TEST_SOURCES object/ObjectBuilderTests.cpp)
 
 add_executable(Test ${PROJECT_SOURCE_DIR}/src/test/main.cpp)
