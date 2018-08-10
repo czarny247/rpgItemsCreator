@@ -9,3 +9,5 @@ TODOS:
 	# https://mirkokiefer.com/cmake-by-example-f95eb47d45b1
 
 * efficiently using external project
+* changes in cmake and then recompiling triggers downolading externals
+* using libraries via cmake - READ
