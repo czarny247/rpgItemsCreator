@@ -17,6 +17,6 @@ set(INCL_DIRS
 	INCLUDE_DIR
 	thirdparty/json/include)
 
-target_include_directories(ObjectLib PRIVATE thirdparty/json/include)
+target_include_directories(ObjectLib PUBLIC thirdparty/json/include)
 target_include_directories(rpgItemsCreator PRIVATE ${INCL_DIRS})
 target_include_directories(Test PRIVATE ${INCL_DIRS})
