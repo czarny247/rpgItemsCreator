@@ -1,5 +1,5 @@
-#ifndef OBJECTBUILDER_HPP
-#define OBJECTBUILDER_HPP
+#ifndef OBJECTBUILDER_HPP_
+#define OBJECTBUILDER_HPP_
 
 //todo: choose only needed includes
 #include <tao/json/events.hpp>
@@ -23,7 +23,9 @@ class ObjectBuilder
 public:
 	ObjectBuilder();
 
-	Object pullObject();
+	//leave it for now - maybe it will be useful as it looks now
+	//return std::optional (c++17 needed) or (smart?) pointer - it will hide json type dependencies - see tests!
+	Object pullObject(); //rename to build() ?
 
 	template <typename T>
 	ObjectBuilder& addMember(const std::string& memberName, 
@@ -39,4 +41,4 @@ private:
 
 } // namespace object
 
-#endif //OBJECTBUILDER
+#endif //OBJECTBUILDER_HPP_

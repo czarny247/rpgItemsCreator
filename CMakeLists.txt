@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.11)
 
+#specify c++ version - 14 or 17 ?
+
 project(RPG_ITEMS_CREATOR)
 
 include(${PROJECT_SOURCE_DIR}/cmake/rpgItemsCreator/CMakeLists.txt)
