@@ -6,7 +6,7 @@
 #include <tao/json.hpp>
 
 //how to link to shorten this include?
-#include "../../rpgItemsCreator/object/ObjectBuilder.hpp"
+#include "../src/object/ObjectBuilder.hpp"
 
 //#include "object/ObjectBuilder.hpp"
 

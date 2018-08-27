@@ -7,13 +7,16 @@ project(RPG_ITEMS_CREATOR)
 include(${PROJECT_SOURCE_DIR}/cmake/rpgItemsCreator/CMakeLists.txt)
 include(${PROJECT_SOURCE_DIR}/cmake/test/CMakeLists.txt)
 
-add_subdirectory(src/rpgItemsCreator rpgItemsCreator)
-add_subdirectory(src/test test)
+# add_subdirectory(src/rpgItemsCreator rpgItemsCreator)
+# add_subdirectory(src/test test)
+
+add_subdirectory(src)
+add_subdirectory(test)
 
 enable_testing()
 add_test(NAME MyTest COMMAND Test)
 
-set(INCLUDE_DIR src/rpgItemsCreator)
+set(INCLUDE_DIR src)
 
 set(INCL_DIRS
 	INCLUDE_DIR

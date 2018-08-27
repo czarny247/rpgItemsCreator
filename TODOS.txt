@@ -11,4 +11,3 @@ TODOS:
 * efficiently using external project
 * changes in cmake and then recompiling triggers downolading externals
 * using libraries via cmake - READ
-* change project tree layout - src/rpgItemsCreator, src/test -> src , test (redundant parent)
